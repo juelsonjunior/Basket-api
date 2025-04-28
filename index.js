@@ -7,9 +7,7 @@ const port = 3001
 
 // Middleware para processar JSON no corpo da requisição
 app.use(express.json())
-app.use(cors({
-  origin: ['https://basket-front.vercel.app/']
-}));
+app.use(cors());
 
 // Rota para pesquisar jogadores pelo nome
 app.post("/search", (req, res) => {
