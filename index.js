@@ -53,7 +53,8 @@ app.post("/search", async (req, res) => {
     const historyEntry = results.map((player) => ({
       id: player.id || null,
       nome: player.nome,
-      equipe: player.equipe, // Aqui está o problema: está usando "time" em vez de "equipe"
+      equipe: player.equipe,
+       // Aqui está o problema: está usando "time" em vez de "equipe"
     }));
 
     // Lê e atualiza o histórico
