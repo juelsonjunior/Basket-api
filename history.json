@@ -1,0 +1,47 @@
+[
+  {
+    "id": 10,
+    "nome": "Damian Lillard",
+    "equipe": "Portland Trail Blazers"
+  },
+  {
+    "id": 9,
+    "nome": "Kawhi Leonard",
+    "equipe": "Los Angeles Clippers"
+  },
+  {
+    "id": 8,
+    "nome": "Luka Dončić",
+    "equipe": "Dallas Mavericks"
+  },
+  {
+    "id": 7,
+    "nome": "Giannis Antetokounmpo",
+    "equipe": "Milwaukee Bucks"
+  },
+  {
+    "id": 6,
+    "nome": "Kevin Durant",
+    "equipe": "Phoenix Suns"
+  },
+  {
+    "id": 5,
+    "nome": "Shaquille O'Neal",
+    "equipe": "Los Angeles Lakers"
+  },
+  {
+    "id": 3,
+    "nome": "Kobe Bryant",
+    "equipe": "Los Angeles Lakers"
+  },
+  {
+    "id": 2,
+    "nome": "Michael Jordan",
+    "equipe": "Chicago Bulls"
+  },
+  {
+    "id": 1,
+    "nome": "LeBron James",
+    "equipe": "Los Angeles Lakers"
+  }
+]
