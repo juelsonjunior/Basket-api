@@ -53,7 +53,7 @@ app.post("/search", async (req, res) => {
     const historyEntry = results.map((player) => ({
       id: player.id || null,
       nome: player.nome,
-      time: player.equipe,
+      equipe: player.equipe, // Aqui está o problema: está usando "time" em vez de "equipe"
     }));
 
     // Lê e atualiza o histórico
@@ -68,7 +68,7 @@ app.post("/search", async (req, res) => {
     // Adiciona apenas entradas que ainda não estão no histórico
     historyEntry.forEach((entry) => {
       const exists = history.some(
-        (item) => item.nome === entry.nome && item.time === entry.time
+        (item) => item.nome === entry.nome && item.equipe === entry.equipe
       );
       if (!exists) {
         history.unshift(entry); // Adiciona no início do array
