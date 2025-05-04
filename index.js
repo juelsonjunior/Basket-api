@@ -166,6 +166,33 @@ app.put("/players/:id", async (req, res) => {
   }
 });
 
+// Rota para listar todos os jogadores
+app.get("/players", async (req, res) => {
+  try {
+    const players = await Player.find();
+    res.json(players);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Rota para eliminar um jogador
+app.delete("/players/:id", async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const deletedPlayer = await Player.findByIdAndDelete(id);
+    
+    if (!deletedPlayer) {
+      return res.status(404).json({ message: "Jogador não encontrado." });
+    }
+
+    res.json({ message: "Jogador eliminado com sucesso." });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 // Inicia o servidor
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
